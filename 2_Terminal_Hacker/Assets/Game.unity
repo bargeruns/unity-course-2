@@ -215,7 +215,7 @@ Prefab:
     - target: {fileID: 114950676590966740, guid: 14da20237ce0844aebfd1ee3da29327e,
         type: 2}
       propertyPath: levelPasswords.Array.size
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4493434732558168, guid: 14da20237ce0844aebfd1ee3da29327e, type: 2}
       propertyPath: m_LocalPosition.x
@@ -282,6 +282,21 @@ Prefab:
         type: 2}
       propertyPath: levelWinMessage
       value: Good job. This will keep them busy for minutes.
+      objectReference: {fileID: 0}
+    - target: {fileID: 114950676590966740, guid: 14da20237ce0844aebfd1ee3da29327e,
+        type: 2}
+      propertyPath: levelPasswords.Array.data[2]
+      value: cereal
+      objectReference: {fileID: 0}
+    - target: {fileID: 114950676590966740, guid: 14da20237ce0844aebfd1ee3da29327e,
+        type: 2}
+      propertyPath: levelPasswords.Array.data[3]
+      value: milk
+      objectReference: {fileID: 0}
+    - target: {fileID: 114950676590966740, guid: 14da20237ce0844aebfd1ee3da29327e,
+        type: 2}
+      propertyPath: levelPasswords.Array.data[4]
+      value: jelly
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 14da20237ce0844aebfd1ee3da29327e, type: 2}

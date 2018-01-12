@@ -16,6 +16,12 @@ public class Hacker : MonoBehaviour
     void Start()
     {
         ShowMainMenu("Hello, human user.");
+        ResetPasswords();
+    }
+
+    void ResetPasswords()
+    {
+        levelManager.gameLevels.ForEach(level => level.SetSelectedPassword());
     }
 
     public void ShowMainMenu(string greeting)
@@ -25,6 +31,7 @@ public class Hacker : MonoBehaviour
         Terminal.WriteLine(greeting);
         Terminal.WriteLine("What would you like to hack today?");
         levelManager.ShowAllLevels();
+        ResetPasswords();
     }
 
     public void StartLevel()
@@ -32,6 +39,8 @@ public class Hacker : MonoBehaviour
         currentScreen = Screen.Password;
         levelManager.ShowCurrentLevel();
         Terminal.WriteLine("Enter password: ");
+        Terminal.WriteLine("Hint: " + levelManager.currentLevel.selectedPassword.Anagram());
+        Terminal.WriteLine("(enter 'menu' to exit)");
     }
 
     void OnUserInput(string input)
@@ -70,6 +79,7 @@ public class Hacker : MonoBehaviour
     {
         currentScreen = Screen.Win;
         Terminal.WriteLine("What would you like to do now?");
+        Terminal.WriteLine("(exit) -- (menu)");
     }
 
     private void ExitOrReset(string input)
